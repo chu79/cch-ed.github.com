@@ -14,18 +14,18 @@ body{
     position: absolute;
     width: 100%;
     height: 50%;
-    background: url(images/BG-placeholder.png) 0 0 no-repeat;
+    background: url(IMG/BG-placeholder.png) 0 0 no-repeat;
     background-size: 75%;
     margin-top: 25px;
 }
-
-/*-- Header --*/
 
 body {
     width: 100%;
     list-style: none;
     text-decoration: none;
   }
+
+/*-- Header --*/
   
   header a { 
     color: #ffffff;
@@ -39,53 +39,40 @@ body {
   header a:active { 
     color: #b8b8b8; 
   }
-  
-  /*-- Nav Bar --*/
-  
+
   header{
-    display: flex; 
-    height: 40px;
-    justify-content: space-between;
-    align-items: center;
+    height: 80px;
     padding: 0px 10px;
     position: relative;
     z-index: 2;   
+    border-bottom: 2px #fff solid;
+    font-size: 16px;
+    letter-spacing: 2.5px;
   }
 
-  #sider{
-      display: flex;
+  .innerContainer{
+    height: 100%;
+    align-items: end;
+    padding-bottom: 20px;
+    justify-content: space-between;
   }
 
-  
-  /*logo*/
+  /*Logo*/
   
   .logo {
-    float:left;
     cursor: pointer;
-    margin-left: 25px;
   }
 
   /* Line */
+
   .line_link svg{
     width: 20px;
     height: auto;
     margin-left: 50%;
-
-  }
-  
-  .nav li a{
-      font-size: 10px;
-      letter-spacing: 2px;
   }
   
   .nav > li {
     display: inline-block;
-    padding-right: 20px;
-    font-size: 0.9rem;
-  }
-  
-  .nav > li:last-child{
-    padding-right: 10px;
   }
   
   .hover-underline-animation {
@@ -112,20 +99,15 @@ body {
     transform-origin: bottom left;
   }
   
-  .language{
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  .header-divider{
+  /* .header-divider{
     position: absolute;
     border-top: 1.5px solid white;
-    width: 50%;
+    width: 45%;
     z-index: 2;
-    right: 0px;
-    top: 25px;
-    opacity: 0.3;
-  }
+    opacity: 0.4;
+    top: 55px;
+    right: 110px;
+  } */
   
 
 /*--- Main ---*/
@@ -271,6 +253,14 @@ footer{
     background-color: #43485799;
 }
 
+.nav-item:first-child{
+    margin-right: 30px;
+}
+
+.nav-item:last-child{
+    margin-left: 30px;
+}
+
 .nav-link{
     display: flex;
     align-items: center;
@@ -356,13 +346,13 @@ svg{
         opacity: 0;
         background-color: #343434bb;
         left: 0px;
-        top: 42px;
+        top: 80px;
         transition: height 0.25s, opacity 0.25s;
       }
           
       #sider.active {
          opacity: 1;
-         height: 160px;
+         height: 190px;
       }
 
     .nav li:hover {
@@ -402,6 +392,9 @@ svg{
         display: none;
     }
 
+    .header-divider{
+        display: none;
+      }
 
     /*--- logo ---*/
 
@@ -420,8 +413,6 @@ svg{
         width: 30px;
         height: 30px;
         position: relative;
-        right: 10px;
-        top: 5px;
 
     }
 
@@ -642,7 +633,7 @@ svg{
 }
 
 
-
+/* // Small devices (smartphone, below 580px ) */
 @media (max-width: 580px) {
 
     .mycontainer{
@@ -661,7 +652,7 @@ svg{
         top: -40px;
     }
 
-    /*--- Main ---*/
+/*--- Main ---*/
 
     .boxoutline{
         position: absolute;
@@ -706,7 +697,7 @@ svg{
         padding-top: 20px 20px;
     }
 
-    /*--- Herobox ---*/
+/*--- Herobox ---*/
     
     .demobox{
         margin-top: 15rem;
@@ -733,14 +724,12 @@ svg{
             border-radius: 0px;
     }
     
-    /*----- Footer -----*/
-
+/*----- Footer -----*/
 
 footer ul{
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .nav-link{
     display: flex;
@@ -762,14 +751,12 @@ footer .row a img{
 
 hr.style1{
     width: 50%;
-
 }
 
 .copyright{
     font-size: 10px;
     letter-spacing: 1px;
     padding-top: 15px;
-
 }
 
 .copyright a{
@@ -777,7 +764,6 @@ hr.style1{
     font-weight: bold;
     text-decoration: underline;
     text-underline-offset: 2px;
-
 }
 
 .footer-divider{
@@ -785,7 +771,14 @@ hr.style1{
     margin-bottom: 0px;
     height: 3px;
     opacity: 0.3;
+}
 
+.nav-item:first-child{
+    margin-right: 0px;
+}
+
+.nav-item:last-child{
+    margin-left: 0px;
 }
 
 }
