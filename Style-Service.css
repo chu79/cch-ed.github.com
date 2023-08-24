@@ -159,7 +159,7 @@ main {
     width: 100%;
     height: 350px;
     position: relative;
-    background-image: url(/IMG/service_ED.jpg);
+    background-image: url(IMG/service-ED.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -173,7 +173,7 @@ main {
     width: 100%;
     height: 350px;
     position: relative;
-    background-image: url(/IMG/service_sandblasting.jpg);
+    background-image: url(IMG/service-sandblasting.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
