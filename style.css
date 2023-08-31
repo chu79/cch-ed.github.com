@@ -499,7 +499,7 @@ svg {
 
 /* Global style wax-width 1000px */
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
 
     .mycontainer::before {
         background-image: url(IMG/home_main_2.png);
