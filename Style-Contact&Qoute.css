@@ -1,7 +1,20 @@
 body {
     background-color: #1c2026;
-    background-image: radial-gradient(circle 300px at 75% 800px, #434857, rgba(0, 128, 0, 0));
+    background-image: radial-gradient(circle 300px at 90% 35%, #434857, rgba(0, 128, 0, 0));
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
+
+/*---global styles---*/
+
+.mycontainer {
+    position: relative;
+    overflow: hidden;
+}
+
 
 /*-- Header --*/
 
@@ -24,33 +37,33 @@ header {
     padding: 0px 10px;
     position: relative;
     z-index: 2;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 2.5px;
+    max-width: 1600px;
+
 }
 
 .innerContainer {
     height: 100%;
     align-items: end;
-    padding-bottom: 20px;
+    display: flex;
     justify-content: space-between;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0 0 20px 0;
 }
 
 /*   Logo  */
 
 .logo {
     cursor: pointer;
+    width: 140px;
 }
 
-
-.nav>li {
-    display: inline-block;
-    padding-right: 10px;
+.nav {
+    display: flex;
+    gap: 5px;
 }
-
-.nav>li:last-child {
-    padding-right: 0px;
-}
-
 
 .hover-underline-animation {
     position: relative;
@@ -63,7 +76,7 @@ header {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 1px;
+    height: 2px;
     bottom: -3px;
     left: 0;
     background-color: #f0bc1f;
@@ -78,14 +91,13 @@ header {
 
 .header-divider {
     position: absolute;
-    border-top: 1.5px solid white;
+    border-top: 2.5px solid white;
     width: 65%;
     z-index: 2;
-    opacity: 0.4;
+    opacity: 0.5;
     top: 75px;
     right: 0px;
 }
-
 
 /* Main */
 
@@ -121,67 +133,94 @@ main {
     color: white;
 }
 
+/* --- Info-title --- */
+/* --- Info-title --- */
 
-/* Info-title */
+.info-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-
-.titlebox {
-    max-width: 140px;
-    font-size: 25px;
+.info-title p {
+    text-align: center;
+    font-size: 28px;
     padding-bottom: 8px;
-    border-bottom: 1.5px solid #f0bc1f;
+    border-bottom: 2px solid #f0bc1f;
     margin-top: 40px;
     margin-bottom: 60px;
+    letter-spacing: 8px;
+    padding-left: 8px;
 }
 
 .contactinfo {
     height: 460px;
     display: flex;
     margin: 0px 15px;
+    align-items: center;
 }
 
 /* --- Info Box --- */
 /* --- Info Box --- */
 
+
+.leftContent {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1.6px solid rgba(187, 187, 187, 0.679);
+}
+
 .leftbox {
-    color: rgba(255, 255, 255, 0.604);
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 310px;
+    padding-top: 25px;
 }
 
 .info {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     width: 100%;
-    height: 80px;
     letter-spacing: 2px;
-    padding-left: 15%;
+    margin-bottom: 25px;
 }
 
 .info img {
-    width: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
-    margin-right: 5%;
+}
+
+.infoDivider {
+    border-left: 2px solid #f0bc1f;
+    margin: 0px 5%;
+    height: 60px;
 }
 
 .myinfo {
-    border-left: 2px solid #f0bc1f;
-    padding-left: 5%;
-    position: relative;
-    display: block;
     text-align: start;
-    overflow-wrap: break-word;
 }
 
 .myinfo h6 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 3px;
+    letter-spacing: 24px;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.604);
 }
 
 .myinfo p {
     color: #ffff;
-    font-size: 12px;
+    font-size: 18px;
     padding-top: 6px;
-    line-height: 15px;
+    line-height: 20px;
     word-break: break-all;
 }
 
@@ -196,11 +235,6 @@ main {
     height: auto;
 }
 
-.verticaldiv {
-    border-right: 1.6px solid rgb(187, 187, 187);
-    width: 50%;
-    height: 400px;
-}
 
 /* --- Form --- */
 /* --- Form --- */
@@ -212,6 +246,20 @@ main {
 .form-control {
     background-color: rgba(255, 255, 255, 0.056);
     border: 1.5px solid #fff;
+}
+
+.inputBox input::placeholder {
+    font-size: 14px;
+}
+
+.inputBox textarea::placeholder {
+    font-size: 14px;
+}
+
+.inputBox button p {
+    letter-spacing: 14px;
+    padding-left: 14px;
+    font-size: 16px;
 }
 
 /* --- Office Hour --- */
@@ -229,7 +277,7 @@ main {
     border-top: 1.5px solid rgba(255, 255, 255, 0.61);
     width: 50%;
     margin-bottom: 40px;
-
+    margin-top: 50px;
 }
 
 .head {
@@ -239,8 +287,9 @@ main {
 }
 
 .time {
+    color: #ffffffb5;
     letter-spacing: 12px;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 /* Form */
@@ -360,7 +409,10 @@ button p {
     flex-direction: column;
     padding: 2px;
     position: relative;
-    /* background-color: #fff; */
+}
+
+.cardtext img {
+    width: 100%;
 }
 
 .q-intro-box {
@@ -383,11 +435,11 @@ button p {
     color: #c0c0c0;
 }
 
-/* Footer */
+/* --- Footer --- */
+/* --- Footer --- */
 
 footer {
-    padding-top: 40px;
-    padding-bottom: 35px;
+    display: block;
     position: relative;
     text-align: center;
     height: auto;
@@ -403,14 +455,6 @@ footer {
     color: #f0bc1f;
 }
 
-.nav-item:first-child {
-    margin-right: 30px;
-}
-
-.nav-item:last-child {
-    margin-left: 30px;
-}
-
 .nav-link {
     display: flex;
     align-items: center;
@@ -420,8 +464,9 @@ footer {
 
 .nav-link p {
     color: #fff;
-    font-size: 10px;
+    font-size: 16px;
     letter-spacing: 2px;
+    padding-left: 10px;
 }
 
 .nav-link p:hover {
@@ -429,10 +474,10 @@ footer {
 }
 
 .copyright {
-    font-size: 8px;
+    font-size: 14px;
     letter-spacing: 1px;
-    padding-top: 15px;
     color: #9d9d9d;
+    line-height: 20px;
 }
 
 .copyright a {
@@ -443,26 +488,29 @@ footer {
 }
 
 .footer-divider {
-    margin-top: 0px;
-    margin-bottom: 0px;
     height: 3px;
     opacity: 0.3;
+    max-width: 1600px;
 }
 
 svg {
     fill: inherit;
 }
 
-#call_svg {
-    width: 12%;
-}
 
-#location_svg {
-    width: 8%;
-}
 
-#email_svg {
-    width: 10%;
+/* Global style wax-width 1000px */
+
+@media (min-width: 1000px) {
+
+    .innerContainer {
+        padding: 0px 60px 20px 60px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
 }
 
 
@@ -483,7 +531,7 @@ svg {
     #sider.active {
         display: block;
         opacity: 1;
-        height: 180px;
+        height: auto;
     }
 
     .nav li:hover {
@@ -630,6 +678,10 @@ svg {
 
     /* Herobox */
 
+    .info img {
+        width: 30px;
+    }
+
     /* --- Form --- */
 
     form label {
@@ -687,69 +739,20 @@ svg {
         padding-left: 0px;
     }
 
+    /* --- footer --- */
+    /* --- footer --- */
 
-    /* Footer */
-
-    .nav-link {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .nav-link p {
-        letter-spacing: 2px;
-    }
-
-    #call-svg {
-        width: 12%;
-    }
-
-    #address-svg {
-        width: 8%;
-    }
-
-    #email-svg {
-        width: 10%;
+    footer ul {
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     hr.style1 {
         width: 50%;
     }
 
-    .copyright {
-        font-size: 8px;
-        letter-spacing: 1px;
-        padding-top: 15px;
-    }
-
     .copyright a {
-        color: #fff;
-        font-weight: bold;
-        text-decoration: underline;
         text-underline-offset: 2px;
-    }
-
-    .footer-divider {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        height: 3px;
-        opacity: 0.3;
-    }
-
-    svg {
-        fill: inherit;
-    }
-
-    #call_svg {
-        width: 13%;
-        color: #f0bc1f;
-    }
-
-    #location_svg {
-        width: 9%;
-    }
-
-    #email_svg {
-        width: 10%;
     }
 
 }
@@ -775,13 +778,12 @@ svg {
 
     /* ---Info--- */
 
+
     .infobox {
         box-shadow: none;
         width: 100%;
         border: none;
         margin-top: 0px;
-        min-height: 1080px;
-        /* background-color: rgba(255, 255, 255, 0.289); */
     }
 
     .contactinfo {
@@ -791,27 +793,31 @@ svg {
         height: 400px;
     }
 
+
     .info {
         height: 50px;
         letter-spacing: 3px;
         margin-bottom: 35px;
     }
 
-    .verticaldiv {
+    .leftContent {
         width: 100%;
+        margin-bottom: 20px;
         border: none;
-        height: 400px;
     }
 
-    .info-divider {
-        position: relative;
-        width: 80%;
-        border-top: 1.5px solid #ffff;
-        display: none;
+    .leftbox {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 330px;
+        padding-top: 25px;
     }
 
     .formbox {
-        width: 80%;
+        width: 100%;
         position: relative;
         top: -20px;
     }
@@ -865,9 +871,9 @@ svg {
     }
 
     /*----- Footer -----*/
+    /*----- Footer -----*/
 
     footer ul {
-        display: flex;
         flex-wrap: wrap;
     }
 
@@ -884,13 +890,11 @@ svg {
         padding: 0px 0.4rem;
     }
 
-
     hr.style1 {
         width: 50%;
     }
 
     .copyright {
-        font-size: 10px;
         letter-spacing: 1px;
         padding-top: 15px;
     }
@@ -919,25 +923,6 @@ svg {
 
 }
 
-/* // Small devices (smartphone, below 568px ) */
-@media (max-width: 492px) {
-    footer ul li:last-child {
-        padding-top: 10px;
-    }
-}
-
-/* // Small devices (smartphone, below 568px ) */
-@media (max-width: 310px) {
-
-    footer ul li:nth-child(2) {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    footer ul li:last-child {
-        padding-top: 0px;
-    }
-}
 
 /* ---// 
 yellow: #f0bc1f 

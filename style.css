@@ -1,6 +1,6 @@
 body {
     background-color: #1c2026;
-    background-image: radial-gradient(circle 300px at 1700px 800px, #434857, rgba(0, 128, 0, 0));
+    background-image: radial-gradient(circle 300px at 90% 35%, #434857, rgba(0, 128, 0, 0));
     width: 100%;
     list-style: none;
     text-decoration: none;
@@ -48,30 +48,31 @@ header {
     z-index: 2;
     font-size: 18px;
     letter-spacing: 2.5px;
+    max-width: 1600px;
+
 }
 
 .innerContainer {
     height: 100%;
     align-items: end;
-    padding-bottom: 20px;
+    display: flex;
     justify-content: space-between;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0 0 20px 0;
 }
 
 /*   Logo  */
 
 .logo {
     cursor: pointer;
+    width: 140px;
 }
 
-.nav>li {
-    display: inline-block;
-    padding-right: 10px;
+.nav {
+    display: flex;
+    gap: 5px;
 }
-
-.nav>li:last-child {
-    padding-right: 0px;
-}
-
 
 .hover-underline-animation {
     position: relative;
@@ -84,7 +85,7 @@ header {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 1px;
+    height: 2px;
     bottom: -3px;
     left: 0;
     background-color: #f0bc1f;
@@ -99,10 +100,10 @@ header {
 
 .header-divider {
     position: absolute;
-    border-top: 1.5px solid white;
+    border-top: 2.5px solid white;
     width: 65%;
     z-index: 2;
-    opacity: 0.4;
+    opacity: 0.5;
     top: 75px;
     right: 0px;
 }
@@ -138,10 +139,11 @@ header {
 }
 
 .text-1 {
-    color: #9d9d9d;
+    color: #434343;
     letter-spacing: 10px;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #ffff;
 
 }
 
@@ -211,7 +213,8 @@ header {
     border-radius: 50%;
     background: #000000;
     border: 4px solid var(--clr);
-    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+    box-shadow: 0 0 10px var(--clr);
+    box-shadow: 0 0 60px var(--clr);
     transition: 0.5s, background 0.5s;
     -webkit-transition-delay: 0.5s, background 0.5s;
     transition-delay: 0.5s, 0.5s;
@@ -368,22 +371,28 @@ header {
 
 .card1,
 .card2 {
-    height: 400px;
+    height: 350px;
+    margin-bottom: 80px;
 }
 
 .card1 img {
     float: right;
     margin-right: 100px;
+    display: flex;
+    z-index: 5px;
 }
 
 .card2 img {
     float: left;
+    top: -50px;
     margin-left: 100px;
+    display: flex;
+    position: relative;
+    z-index: 5px;
 }
 
 .cardImg {
-    height: 370px;
-    /* width: 250px; */
+    height: 450px;
 }
 
 .cardText {
@@ -404,7 +413,7 @@ header {
     text-align: end;
     position: absolute;
     padding-right: 15px;
-    margin-top: 180px;
+    margin-top: 300px;
     right: 95px;
 }
 
@@ -418,18 +427,19 @@ header {
 }
 
 .cardText p {
-    color: #9d9d9d;
+    color: #ffffff;
     font-size: 14px;
     letter-spacing: 1.5px;
-    line-height: 15px;
+    line-height: 18px;
 }
 
 
-/* Footer */
+/* --- Footer --- */
+/* --- Footer --- */
+
 
 footer {
-    padding-top: 40px;
-    padding-bottom: 35px;
+    display: block;
     position: relative;
     text-align: center;
     height: auto;
@@ -443,14 +453,6 @@ footer {
 
 .nav-item:hover a p {
     color: #f0bc1f;
-}
-
-.nav-item:first-child {
-    margin-right: 30px;
-}
-
-.nav-item:last-child {
-    margin-left: 30px;
 }
 
 .nav-link {
@@ -474,8 +476,8 @@ footer {
 .copyright {
     font-size: 14px;
     letter-spacing: 1px;
-    padding-top: 15px;
-    color: #b0b0b0;
+    color: #9d9d9d;
+    line-height: 20px;
 }
 
 .copyright a {
@@ -486,10 +488,9 @@ footer {
 }
 
 .footer-divider {
-    margin-top: 0px;
-    margin-bottom: 0px;
     height: 3px;
     opacity: 0.3;
+    max-width: 1600px;
 }
 
 svg {
@@ -499,17 +500,24 @@ svg {
 
 /* Global style wax-width 1000px */
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
 
     .mycontainer::before {
         background-image: url(IMG/home_main_2.png);
-        background-position: center -150px;
-        background-size: 1400px;
+        background-position: center -250px;
+        background-size: 1600px;
+    }
 
+    .innerContainer {
+        padding: 0px 60px 20px 60px;
+    }
+
+    .nav {
+        gap: 10px;
     }
 
     .headbox img {
-        height: 170px;
+        height: 200px;
         left: 12rem;
         bottom: 1rem;
     }
@@ -517,6 +525,12 @@ svg {
     .textBox {
         left: 140px;
         top: -7px;
+    }
+
+    .card1,
+    .card2 {
+        height: 350px;
+        margin-bottom: 150px;
     }
 
 
@@ -547,7 +561,7 @@ svg {
     #sider.active {
         display: block;
         opacity: 1;
-        height: 180px;
+        height: auto;
     }
 
     .nav li:hover {
@@ -587,9 +601,6 @@ svg {
         display: none;
     }
 
-    /* .header-divider {
-        display: none;
-    } */
 
     /*--- logo ---*/
 
@@ -718,17 +729,14 @@ svg {
     }
 
 
-    /* Herobox */
-    /*  Slide Demo Img  */
+    /*--- Herobox ---*/
+    /*--- Herobox ---*/
+
 
     .demoBox {
         width: 100%;
-        height: 600px;
-
         position: relative;
         margin-top: 60px;
-        margin-bottom: 200px;
-        z-index: 5px;
     }
 
     .demoCard {
@@ -811,6 +819,16 @@ svg {
 
     /* --- cards --- */
 
+    .card1,
+    .card2 {
+        padding-bottom: 80px;
+    }
+
+
+    .cardImg {
+        height: 450px;
+    }
+
     .card1 img {
         margin-right: 30px;
     }
@@ -833,55 +851,25 @@ svg {
         text-align: end;
         position: absolute;
         padding-right: 15px;
-        margin-top: 180px;
+        margin-top: 200px;
         right: 45px;
     }
 
 
-    /* Footer */
+    /* --- footer --- */
+    /* --- footer --- */
 
     footer ul {
         flex-wrap: wrap;
         gap: 8px;
     }
 
-
-    .nav-link {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .nav-link p {
-        letter-spacing: 2px;
-    }
-
-
     hr.style1 {
         width: 50%;
     }
 
-    .copyright {
-        font-size: 8px;
-        letter-spacing: 1px;
-        padding-top: 15px;
-    }
-
     .copyright a {
-        color: #fff;
-        font-weight: bold;
-        text-decoration: underline;
         text-underline-offset: 2px;
-    }
-
-    .footer-divider {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        height: 3px;
-        opacity: 0.3;
-    }
-
-    svg {
-        fill: inherit;
     }
 
 }
@@ -925,7 +913,7 @@ svg {
     /* ---- Herobox ---- */
 
     .demoBox {
-        margin-top: 10px;
+        margin-top: 80px;
     }
 
 
@@ -983,12 +971,16 @@ svg {
 
     .cardboxs {
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
 
     .card1,
     .card2 {
         height: 600px;
+    }
+
+    .cardImg {
+        height: 400px;
     }
 
     .card1 .cardText {
@@ -1006,6 +998,7 @@ svg {
     }
 
     /*----- Footer -----*/
+    /*----- Footer -----*/
 
     footer ul {
         flex-wrap: wrap;
@@ -1014,7 +1007,6 @@ svg {
     .nav-link {
         display: flex;
         justify-content: space-around;
-        align-items: center;
         text-decoration: none;
         color: #fff;
         font-size: 12px;
@@ -1024,17 +1016,11 @@ svg {
         padding: 0px 0.4rem;
     }
 
-    footer .row a img {
-        background-color: aqua;
-    }
-
-
     hr.style1 {
         width: 50%;
     }
 
     .copyright {
-        font-size: 10px;
         letter-spacing: 1px;
         padding-top: 15px;
     }
@@ -1072,19 +1058,16 @@ svg {
 
     .headbox {
         padding-left: 0;
-        padding-bottom: 100px;
+        padding-bottom: 200px;
     }
-
 
     .headbox img {
         height: 120px;
     }
 
     .textBox {
-        left: 0px;
-        top: -10px;
+        left: 10px;
     }
-
 
     .text-1 {
         letter-spacing: 8px;
@@ -1108,6 +1091,11 @@ svg {
     /* ---- Herobox ---- */
     /* ---- Herobox ---- */
 
+    .demoBox {
+        margin-top: 10px;
+        margin-bottom: 80px;
+    }
+
 
     .contentBox h2 {
         font-size: 20px;
@@ -1130,6 +1118,21 @@ svg {
     .demoCircle .demoIcon::before {
         width: 250px;
         height: 250px;
+    }
+
+
+}
+
+/* // Small devices (smartphone, below 568px ) */
+@media (max-width: 410px) {
+    .headbox {
+        position: relative;
+        top: -20px;
+
+    }
+
+    .demoBox {
+        margin-top: -40px;
     }
 
 }
