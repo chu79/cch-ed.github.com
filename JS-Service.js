@@ -37,9 +37,13 @@ $(document).ready(function () {
 
     /*--- Scrolling Bar 1--*/
 
+    var headerHeight = $(':header').height(); 
+    var myheroboxHeight = $('.myherobox').height(); 
+
+
     $(window).scroll(function () {
         let scroll = $(window).scrollTop();
-        if (scroll >= 510) {
+        if (scroll >= myheroboxHeight-45) {
             $(".scrollbar").addClass("scrollbardown");
         }
         else {
@@ -49,18 +53,21 @@ $(document).ready(function () {
     });
 
 
-    /*--- Scrolling Bar 2--*/
+    /*--- Scrolling Bar 2-- */
 
     $(window).scroll(function () {
         let scroll = $(window).scrollTop();
-        if (scroll >= 520 && scroll<=1240) {
+        if (scroll >=300)  {
             $(".scrollbar2").addClass("scrollbardown2");
         }
-        else {
-            $(".scrollbar2").removeClass("scrollbardown2");
-        }
-    });
+      
+      else{
+        $(".scrollbar2").removeClass("scrollbardown2");
 
+      }
+
+    });
+  
 
 
 

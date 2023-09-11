@@ -41,11 +41,11 @@ $(document).ready(function () {
 // Slide Image
 
 var images = [
-  "IMG/homeImg_2.png",
-  "IMG/homeImg_1.png",
-  "IMG/homeImg_3.png",
-  "IMG/homeImg_4.png",
-  "IMG/homeImg_6.png"
+  "IMG/homeImg2.png",
+  "IMG/homeImg1.png",
+  "IMG/homeImg3.png",
+  "IMG/homeImg4.png",
+  "IMG/homeImg6.png"
 ];
 var currentImage = 0;
 
