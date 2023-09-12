@@ -172,32 +172,16 @@ main {
     transition: all .7s;
 }
 
-.imgbox-1 {
-    width: 100%;
-    height: 350px;
-    position: relative;
-    background-image: url(IMG/service_ED.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+.imgbox-1,
 .imgbox-2 {
     width: 100%;
     height: 350px;
     position: relative;
-    background-image: url(IMG/service_sandblasting.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
 }
 
 .blur {
